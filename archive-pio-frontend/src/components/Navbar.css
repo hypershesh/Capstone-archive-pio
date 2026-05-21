@@ -1,0 +1,80 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* TOPBAR */
+.topbar {
+  background: #2e6eb5;
+  color: white;
+  font-size: 13px;
+  padding: 10px 0;
+}
+
+.topbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #b11a29; /* Maroon color from the screenshots */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  justify-content: center; /* 🔥 Ginawang centered ang links */
+  display: flex;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 40px; /* Nilakihan ang gap dahil apat na lang ang links */
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 15px 30px;
+  font-size: 20px; /* Standard size para sa navigation */
+  font-weight: 400;
+  transition: background 0.3s ease;
+}
+
+/* HOVER & ACTIVE */
+.navbar ul li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul li a.active {
+  background: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .topbar-right {
+    display: none;
+  }
+  .navbar ul {
+    gap: 10px;
+  }
+  .navbar ul li a {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}

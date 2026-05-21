@@ -1,0 +1,304 @@
+
+.contact-page {
+  background-color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* PULANG HEADER BANNER */
+.contact-header {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.contact-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-overlay-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 70px;
+}
+
+.logo-text-contact {
+  color: white;
+  text-align: center;
+}
+
+.logo-text-contact h2 {
+  font-size: 45px !important;
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.logo-text-contact h4 {
+  font-size: 16px;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+/* MAIN LAYOUT WRAPPER (GIGITNA AT LALAYO SA MGA GILID) */
+.contact-header + div,
+.contact-page-wrapper {
+  max-width: 1100px !important;
+  margin-top: 80px !important; /* Gap mula sa banner pababa */
+  margin-bottom: 80px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  box-sizing: border-box !important;
+  display: block !important;
+}
+
+/* TWO-COLUMN GRID LAYOUT (MAIN CARDS AT FORM BOX) */
+.contact-grid-layout {
+  display: flex;
+  gap: 50px;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* KALIWANG BAHAGI (INFO CARDS) */
+.contact-info-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* INDIVIDUAL INFO CARDS (SHARED STYLES WITH HOTLINES) */
+.contact-info-card,
+.hotline-card {
+  background-color: #f4f6fc; /* Light gray-blue background */
+  border: 1.5px solid #000000; /* Itim na outline border */
+  border-radius: 15px;
+  padding: 22px 26px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Icon block sa loob ng mga cards */
+.contact-card-icon-box {
+  background-color: #b11a29; /* Pulang icon box */
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-emoji-icon {
+  font-size: 20px;
+  color: white;
+}
+
+.contact-card-details h3 {
+  font-size: 14px;
+  color: #333333;
+  margin: 0 0 4px 0;
+  font-weight: bold;
+}
+
+.contact-card-details p {
+  font-size: 15px;
+  margin: 2px 0;
+  color: #333333;
+  line-height: 1.3;
+}
+
+.highlight-red-text {
+  color: #b11a29 !important; /* Pulang text accents */
+  font-weight: bold;
+}
+
+.font-underline {
+  text-decoration: underline;
+}
+
+.font-bold {
+  font-weight: 800;
+}
+
+.closed-days-note {
+  font-size: 11px;
+  color: #666666;
+  display: block;
+  margin-top: 3px;
+}
+
+/* KANANG BAHAGI: MALAKING FORM BOX */
+.contact-form-right-box {
+  flex: 1.6;
+  background-color: #f4f6fc; /* */
+  border: 1.5px solid #000000; /* */
+  border-radius: 20px;
+  padding: 45px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box-inside-wrapper {
+  width: 100%;
+  text-align: left;
+}
+
+.form-box-inside-wrapper h2 {
+  color: #b11a29;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.form-sub-desc {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 25px;
+}
+
+/* FORM FIELDS */
+.actual-embedded-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-form-group label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+  border-color: #b11a29;
+}
+
+.submit-message-btn {
+  background-color: #b11a29;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+  margin-top: 5px;
+}
+
+.submit-message-btn:hover {
+  background-color: #7a0c16;
+}
+
+/* ==========================================================================
+   🔥 EMERGENCY HOTLINE SECTION (3-COLUMN GRID LAYOUT)
+   ========================================================================== */
+.emergency-hotline-section {
+  margin-top: 80px; /* Distansya mula sa itaas na layout pababa */
+  width: 100%;
+  text-align: center;
+}
+
+/* Ang mismong pulang Header Line text */
+.emergency-hotline-section h2 {
+  color: #b11a29; /* Pulang pamagat */
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: underline; /* May salungguhit katulad sa larawan */
+  margin-bottom: 40px;
+}
+
+/* Ang Grid Container para sa 3 columns sa desktop */
+.hotline-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Gumagawa ng eksaktong tatlong hanay */
+  gap: 25px; /* Puwang o awang sa pagitan ng bawat hotline card */
+  width: 100%;
+}
+
+/* BACK TO HOME BUTTON */
+.back-home-wrapper-contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.back-home-btn-contact {
+  background-color: #7a0c16;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.back-home-btn-contact:hover {
+  background-color: #b11a29;
+}
+
+/* RESPONSIVE DESIGN FOR MOBILE VIEWS */
+@media (max-width: 900px) {
+  .contact-grid-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .hotline-grid {
+    grid-template-columns: 1fr; /* Isang column na lang kapag mobile screen view */
+    gap: 20px;
+  }
+  .contact-header + div,
+  .contact-page-wrapper {
+    margin-top: 40px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .emergency-hotline-section {
+    margin-top: 50px;
+  }
+}

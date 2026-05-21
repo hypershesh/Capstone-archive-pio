@@ -1,0 +1,316 @@
+.le-request-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  padding: 50px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.le-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.le-main-box {
+  background-color: #f4f4ff;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.le-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.le-header-avatar-wrapper {
+  width: 65px;
+  height: 65px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.le-header-avatar-img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+}
+
+.le-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+}
+
+/* STEP TABS SYSTEM */
+.le-step-tabs-container {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 35px;
+}
+
+.le-step-tab {
+  flex: 1;
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #777777;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.le-step-tab.active {
+  color: #000000;
+}
+
+.le-step-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #7a0c16;
+}
+
+/* FORM FIELDS STYLES */
+.le-request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.le-row {
+  display: flex;
+  gap: 15px;
+}
+
+.le-row .le-form-group {
+  flex: 1;
+}
+
+.le-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.le-form-group label {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.le-form-group input[type='text'],
+.le-form-group input[type='email'],
+.le-form-group input[type='date'],
+.le-form-group input[type='number'],
+.le-form-group select,
+.le-form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  outline: none;
+  background-color: #ffffff;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+.le-form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.le-readonly-input {
+  font-weight: bold;
+  background-color: #ffffff !important;
+}
+
+/* CUSTOM DROPDOWN SELECT ARROW */
+.le-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.le-select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+}
+
+.le-select-wrapper::after {
+  content: ''; 
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #000000;
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.le-info-text {
+  font-size: 14px;
+  color: #444;
+  margin: 0;
+  text-align: left;
+  font-style: italic;
+}
+
+/* DROPZONE UPLOADERS */
+.le-upload-dropzone {
+  width: 100%;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.le-upload-icon-box {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.le-doc-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000'%3E%3Cpath d='M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z'/%3E%3C/svg%3E");
+}
+
+.le-image-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000'%3E%3Cpath d='M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z'/%3E%3C/svg%3E");
+}
+
+.le-upload-main-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+.le-upload-sub-text {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.le-file-selected-badge {
+  margin-top: 8px;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* BUTTONS STYLES */
+.le-form-actions {
+  display: flex;
+  margin-top: 10px;
+}
+
+.le-multi-buttons {
+  gap: 15px;
+}
+
+.le-next-btn, .le-back-btn, .le-submit-btn {
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.le-next-btn, .le-submit-btn {
+  background-color: #7a0c16;
+  color: #ffffff;
+  border: none;
+}
+
+.le-back-btn {
+  background-color: #e9e9e9;
+  color: #000000;
+  border: 1px solid #aeaeae;
+}
+
+/* BACK TO SERVICES LINK */
+.le-back-services-link {
+  text-align: left;
+  margin-top: 25px;
+}
+
+.le-back-services-link span {
+  font-size: 14px;
+  color: #555555;
+  cursor: pointer;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .le-request-page {
+    padding: 20px 0 30px 0;
+  }
+  .le-main-box {
+    padding: 20px 15px;
+  }
+  .le-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  .le-header-avatar-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  .le-header h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .le-step-tab {
+    font-size: 13px;
+    padding-bottom: 10px;
+  }
+  .le-request-form {
+    gap: 15px;
+  }
+  .form-actions.multi-buttons, .le-form-actions.le-multi-buttons {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+  .le-next-btn, .le-back-btn, .le-submit-btn {
+    width: 100%;
+  }
+}

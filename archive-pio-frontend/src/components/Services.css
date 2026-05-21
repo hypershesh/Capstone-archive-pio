@@ -1,0 +1,185 @@
+/* RESET & LAYOUT */
+.services-page {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.services-content-wrapper {
+  padding: 60px 0;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER BANNER SECTION */
+.services-header {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.services-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services-overlay-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 70px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo {
+  width: 120px;
+  height: auto;
+}
+
+.logo-text-services {
+  color: white;
+}
+
+.logo-text-services h2 {
+  font-size: 45px !important;
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.logo-text-services h4 {
+  font-size: 16px;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+/* MAIN SECTION STYLES */
+.request-services-section {
+  text-align: center;
+  width: 100%;
+}
+
+.services-main-title {
+  color: #b11a29;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+/* CARDS GRID SYSTEM */
+.services-cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 35px 30px; /* 35px patayo, 30px pahiga */
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+/* INDIVIDUAL SERVICE CARD */
+.service-card-item {
+  width: 320px;
+  height: 340px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+  /* Swabe at banayad na animation para sa paggalaw */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🔥 EFFECT KAPAG TINAPATAN NG CURSOR ANG CARD */
+.service-card-item:hover {
+  transform: translateY(-10px); /* Aangat ng 10px pataas */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); /* Mas malalim na anino */
+}
+
+/* Puting bahagi sa itaas ng card */
+.service-card-top {
+  flex: 1;
+  background-color: #ffffff;
+}
+
+/* Pulang bahagi sa ilalim ng card */
+.service-card-bottom {
+  background-color: #b11a29;
+  padding: 20px;
+  height: 130px; /* Fixed height para pantay-pantay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-top: 2px solid #000000;
+}
+
+.service-card-bottom h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+
+/* Mini Open Button sa loob ng card */
+.service-open-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ccc;
+  padding: 4px 18px;
+  border-radius: 12px;
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+/* 🔥 EFFECT KAPAG TINAPATAN ANG OPEN BUTTON */
+.service-open-btn:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05); /* Lalaki ng kaunti (5%) */
+}
+
+/* BOTTOM NAVIGATION BUTTON */
+.back-home-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.back-home-btn {
+  background-color: #7a0c16;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+/* 🔥 EFFECT KAPAG TINAPATAN ANG BACK TO HOME BUTTON */
+.back-home-btn:hover {
+  background-color: #b11a29;
+  transform: scale(1.03); /* Bahagyang lalaki para sumunod sa diin ng click */
+}

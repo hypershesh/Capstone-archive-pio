@@ -1,0 +1,344 @@
+.sm-request-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  padding: 50px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CONTAINER */
+.sm-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+/* ANG PANGUNAHING KAHON (Kulay #F4F4FF) */
+.sm-main-box {
+  background-color: #f4f4ff;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* HEADER SECTION */
+.sm-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.header-avatar-wrapper {
+  width: 65px;
+  height: 65px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header-avatar-img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+}
+
+.sm-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+}
+
+/* STEP TABS SYSTEM */
+.step-tabs-container {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 35px;
+}
+
+.step-tab {
+  flex: 1;
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #777777;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.step-tab.active {
+  color: #000000;
+}
+
+.step-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #7a0c16;
+}
+
+/* FORM FIELDS STYLES */
+.sm-request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* INPUTS, TEXTAREA & SELECT DESIGN */
+.form-group input[type='text'],
+.form-group input[type='email'],
+.form-group input[type='date'],
+.form-group input[type='time'],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  outline: none;
+  background-color: #ffffff;
+  color: #000000;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.form-group textarea {
+  resize: vertical;
+  border-radius: 6px;
+}
+
+.form-group input.readonly-input {
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
+/* CUSTOM UPLOAD BOX CARDS (Step 3) */
+.upload-dropzone {
+  width: 100%;
+  background-color: #ffffff;
+  border: 2px solid #828282;
+  border-radius: 4px;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.upload-dropzone:hover {
+  border-color: #7a0c16;
+  background-color: #fafafa;
+}
+
+/* SVG o Clip-art Icon Boxes base sa static layout niyo */
+.upload-icon-box {
+  width: 32px;
+  height: 24px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Mga built-in icons gamit ang CSS standard masks bilang alternatibo sa files niyo */
+.video-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000'%3E%3Cpath d='M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z'/%3E%3C/svg%3E");
+}
+
+.image-icon,
+.audio-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000'%3E%3Cpath d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.45 3.16-1.76-2.12a.5.5 0 0 0-.77.01l-2.35 3.08A.5.5 0 0 0 3.63 18h12.72a.5.5 0 0 0 .4-0.8l-2.73-3.61a.5.5 0 0 0-.78-.02z'/%3E%3C/svg%3E");
+}
+
+.upload-main-text {
+  font-size: 15px;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.upload-sub-text {
+  font-size: 13px;
+  color: #4f4f4f;
+}
+
+.file-selected-badge {
+  margin-top: 10px;
+  background-color: #e2fcd4;
+  color: #27ae60;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* DROPDOWN ARROW STYLING */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+}
+
+.select-wrapper::after {
+  content: '✓';
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  pointer-events: none;
+}
+
+/* ACTIONS BUTTON LAYOUT */
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+.form-actions.multi-buttons {
+  gap: 20px;
+}
+
+/* COMMON BUTTON STYLES */
+.sm-next-btn,
+.sm-back-btn,
+.sm-submit-btn {
+  padding: 12px 45px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+/* NEXT & SUBMIT BUTTON (Maroon Red) */
+.sm-next-btn,
+.sm-submit-btn {
+  background-color: #7a0c16;
+  color: #ffffff;
+  border: none;
+}
+
+.sm-next-btn:hover,
+.sm-submit-btn:hover {
+  background-color: #b11a29;
+}
+
+/* BACK BUTTON (Light Gray) */
+.sm-back-btn {
+  background-color: #e9e9e9;
+  color: #000000;
+  border: 1px solid #aeaeae;
+}
+
+.sm-back-btn:hover {
+  background-color: #dcdcdc;
+}
+
+.sm-next-btn:active,
+.sm-back-btn:active,
+.sm-submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* BACK TO SERVICES LINK */
+.back-services-link {
+  text-align: left;
+  margin-top: 30px;
+  padding-left: 5px;
+}
+
+.back-services-link span {
+  font-size: 14px;
+  color: #555555;
+  cursor: pointer;
+}
+
+.back-services-link span:hover {
+  color: #7a0c16;
+  text-decoration: underline;
+}
+
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .sm-request-page {
+    padding: 20px 0 30px 0;
+  }
+  .sm-main-box {
+    padding: 20px 15px;
+  }
+  .sm-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  .header-avatar-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  .sm-header h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .step-tab {
+    font-size: 13px;
+    padding-bottom: 10px;
+  }
+  .sm-request-form {
+    gap: 15px;
+  }
+  .form-actions.multi-buttons, .sm-form-actions.sm-multi-buttons {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+  .sm-next-btn, .sm-back-btn, .sm-submit-btn {
+    width: 100%;
+  }
+}

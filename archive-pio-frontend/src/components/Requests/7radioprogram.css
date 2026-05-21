@@ -1,0 +1,251 @@
+.rp-request-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  padding: 50px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rp-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.rp-main-box {
+  background-color: #F4F4FF;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.rp-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.rp-header-avatar-wrapper {
+  width: 65px;
+  height: 65px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rp-header-avatar-img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+}
+
+.rp-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+}
+
+/* STEP TABS SYSTEM */
+.rp-step-tabs-container {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 35px;
+}
+
+.rp-step-tab {
+  flex: 1;
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #777777;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rp-step-tab.active {
+  color: #000000;
+}
+
+.rp-step-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #7a0c16;
+}
+
+/* FORM FIELDS STYLES */
+.rp-request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.rp-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.rp-form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.rp-form-group input[type="text"],
+.rp-form-group input[type="email"],
+.rp-form-group input[type="date"],
+.rp-form-group input[type="time"],
+.rp-form-group select,
+.rp-form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  outline: none;
+  background-color: #ffffff;
+  color: #000000;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-clip: padding-box;
+}
+
+.rp-form-group textarea {
+  resize: vertical;
+  height: 140px;
+  border-radius: 12px; 
+}
+
+.rp-form-group input.rp-readonly-input {
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
+/* CUSTOM DROPDOWN SELECT ARROW */
+.rp-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.rp-select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+}
+
+.rp-select-wrapper::after {
+  content: '✓';
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  pointer-events: none;
+}
+
+/* BUTTONS STYLES */
+.rp-form-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+.rp-form-actions.rp-multi-buttons {
+  gap: 20px;
+}
+
+.rp-next-btn, .rp-back-btn, .rp-submit-btn {
+  padding: 12px 45px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rp-next-btn, .rp-submit-btn {
+  background-color: #7a0c16;
+  color: #ffffff;
+  border: none;
+}
+
+.rp-back-btn {
+  background-color: #e9e9e9;
+  color: #000000;
+  border: 1px solid #aeaeae;
+}
+
+/* BACK TO SERVICES LINK */
+.rp-back-services-link {
+  text-align: left;
+  margin-top: 30px;
+  padding-left: 5px;
+}
+
+.rp-back-services-link span {
+  font-size: 14px;
+  color: #555555;
+  cursor: pointer;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .rp-request-page {
+    padding: 20px 0 30px 0;
+  }
+  .rp-main-box {
+    padding: 20px 15px;
+  }
+  .rp-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  .rp-header-avatar-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  .rp-header h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .rp-step-tab {
+    font-size: 13px;
+    padding-bottom: 10px;
+  }
+  .rp-request-form {
+    gap: 15px;
+  }
+  .form-actions.multi-buttons, .rp-form-actions.rp-multi-buttons {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+  .rp-next-btn, .rp-back-btn, .rp-submit-btn {
+    width: 100%;
+  }
+}
